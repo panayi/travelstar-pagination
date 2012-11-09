@@ -1,21 +1,29 @@
-<div class="pagination">
-  <ul>
-    <li {{bindAttr class="view.disablePrev:disabled"}}>
-      <a {{action "previousPage" target="view"}}>
-        &larr; Previous
-      </a>
-    </li>
-    {{#each view.pages}}
-      <li {{bindAttr class="isCurrent:active"}}>
-        <a {{action pageTo this target="view"}}>
-          {{idx}}
-        </a>
-      </li>
-    {{/each}}
-    <li {{bindAttr class="view.disableNext:disabled"}}>
-      <a {{action "nextPage" target="view"}}>
-        &rarr; Next
-      </a>
-    </li>
-  </ul>
-</div>
+<ul>    
+  <li {{bindAttr class="view.disablePrev:disabled :first-child"}}>
+    <a href="#" {{action firstPage target="view"}}>
+      <i class="icon-caret-left"></i><i class="icon-caret-left" style="margin-left:-12px"></i>
+    </a>
+  </li>
+  <li {{bindAttr class="view.disablePrev:disabled"}}> 
+    <a href="#" {{action previousPage target="view"}}> 
+      <i class="icon-caret-left"></i>
+    </a>
+  </li>
+  {{#each view.pages}}
+  <li {{bindAttr class="isCurrent:active"}}>
+    <a href="#" {{action pageTo this target="view"}}>
+      {{idx}}
+    </a>
+  </li>
+  {{/each}}
+  <li {{bindAttr class="view.disableNext:disabled"}}>
+    <a href="#" {{action nextPage target="view"}}>
+      <i class="icon-caret-right"></i>
+    </a>
+  </li>
+  <li {{bindAttr class="view.disableNext:disabled"}}>
+    <a href="#" {{action lastPage target="view"}}>
+      <i class="icon-caret-right" style="margin-right:-12px"></i><i class="icon-caret-right"></i>
+    </a>
+  </li>
+</ul>
