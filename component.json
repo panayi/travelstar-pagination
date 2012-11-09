@@ -1,9 +1,5 @@
 {
   "name": "travelstar-pagination",
-  "version": "0.0.0",
-  "commit": "eff95dabf431066cca5dbdb7b434e18a5d8c7674",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/panayi/travelstar-pagination.git"
-  }
+  "version": "0.1.0",
+  "main": "./dist/travelstar-pagination.js"
 }
